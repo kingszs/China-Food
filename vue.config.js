@@ -25,7 +25,7 @@ module.exports = {
   publicPath: "./",
 
   //当运行 vue-cli-service build 时生成的生产环境构建文件的目录
-  outputDir: "wx_vue",
+  outputDir: "dist",
 
   //放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录
   assetsDir: "./" + Version + "/assets",
@@ -254,7 +254,7 @@ module.exports = {
           configFile: "sentry.properties", //配置文件地址，这个一定要有，踩坑在这里，忘了写导致一直无法实现上传sourcemap
           release: "release@0.0.1", //版本号，自己定义的变量，整个版本号在项目里面一定要对应
           deleteAfterCompile: true,
-          urlPrefix: "~/wx_vue/", //cdn js的代码路径前缀
+          urlPrefix: "~/dist/", //cdn js的代码路径前缀
         },
       ])
     }
